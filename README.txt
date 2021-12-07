@@ -1,0 +1,1 @@
+Small, simple, C# program to show how to capture keyboard input from a command line program
