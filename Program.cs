@@ -36,7 +36,8 @@ namespace KBDCommandLineCapture
             void redrewscreen()
             {
                 //clear the screen
-                Console.Clear();
+                clearLine(kbdkeeyxy[1]);
+                clearLine(kbdstatusxy[1]);
                 Console.SetCursorPosition(kbdwelcomxy[0], kbdwelcomxy[1]);
                 Console.Write("Welcome to my Keyboard Capture Program");
                 Console.SetCursorPosition(kbdkeeyxy[0], kbdkeeyxy[1]);
@@ -58,6 +59,16 @@ namespace KBDCommandLineCapture
                 else
                 {
                     Console.Write("> KEY CAPTURED");
+                }
+            }
+
+            void clearLine(int y)
+            {
+                //small method to clear the line
+                Console.SetCursorPosition(0, y);
+                for (int i = 0; i < 200; i ++)
+                {
+                    Console.Write(" ");
                 }
             }
         }
